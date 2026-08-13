@@ -18,3 +18,5 @@ dev = [
 testpaths = ["tests"]
 pythonpath = ["."]
 
+[tool.vercel]
+entrypoint = "app.main:app"

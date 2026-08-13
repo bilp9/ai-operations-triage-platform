@@ -4,6 +4,8 @@ An end-to-end, human-in-the-loop portfolio project demonstrating how operational
 
 > This project uses synthetic records only. It does not contain employer data, proprietary workflows, customer information, or production integrations.
 
+**[Open the live interactive demo](https://ai-operations-triage-platform.vercel.app/)**
+
 ![AI Operations dashboard preview](docs/dashboard.png)
 
 ## Why This Project Exists
@@ -104,6 +106,16 @@ uvicorn app.main:app --reload
 ```
 
 Open `http://127.0.0.1:8000`.
+
+## Deploy
+
+The project is configured for zero-configuration FastAPI deployment on Vercel:
+
+```bash
+vercel --prod
+```
+
+The hosted portfolio demo uses synthetic records and in-memory state. User-created interactions may reset when the server instance restarts.
 
 ## Test
 
