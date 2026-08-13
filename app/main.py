@@ -7,6 +7,7 @@ from fastapi.staticfiles import StaticFiles
 
 from app.domain import CaseRecord, IntakeRequest, Metrics, ReviewRequest
 from app.evaluation import evaluate_dataset
+from app.engine import get_routing_rules
 from app.seed import seed_store
 from app.store import store
 
@@ -74,6 +75,11 @@ def get_metrics() -> Metrics:
 @app.get("/api/evaluation")
 def get_evaluation() -> dict[str, object]:
     return evaluate_dataset()
+
+
+@app.get("/api/routing-rules")
+def routing_rules() -> list[dict[str, object]]:
+    return get_routing_rules()
 
 
 @app.post("/api/reset", response_model=list[CaseRecord])

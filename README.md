@@ -24,6 +24,7 @@ This platform demonstrates a better operating model:
 
 The dashboard includes:
 
+- Functional Overview, Review Queue, Routing, and Evaluations workspaces
 - Executive-ready operational metrics
 - Priority and low-confidence review queues
 - Explainable routing decisions
@@ -70,6 +71,7 @@ flowchart LR
 | `POST` | `/api/cases/{case_id}/review` | Record a human review or correction |
 | `GET` | `/api/metrics` | Operational and quality metrics |
 | `GET` | `/api/evaluation` | Reproducible 300-case benchmark report |
+| `GET` | `/api/routing-rules` | Explainable queue rules and review policies |
 | `POST` | `/api/reset` | Restore the synthetic demo dataset |
 
 Interactive API documentation is available at `/docs` when the service is running.

@@ -8,6 +8,7 @@ def test_dashboard_and_metrics() -> None:
         dashboard = client.get("/")
         metrics = client.get("/api/metrics")
         evaluation = client.get("/api/evaluation")
+        routing_rules = client.get("/api/routing-rules")
 
     assert dashboard.status_code == 200
     assert "AI Operations" in dashboard.text
@@ -15,6 +16,8 @@ def test_dashboard_and_metrics() -> None:
     assert metrics.json()["total_cases"] >= 10
     assert evaluation.status_code == 200
     assert evaluation.json()["dataset_size"] == 300
+    assert routing_rules.status_code == 200
+    assert len(routing_rules.json()) == 6
 
 
 def test_create_and_review_case() -> None:

@@ -1,4 +1,11 @@
-const state = { cases: [], metrics: null, evaluation: null, selectedId: null, filter: "all" };
+const state = { cases: [], metrics: null, evaluation: null, routingRules: [], selectedId: null, filter: "all", view: "overview" };
+
+const views = {
+  overview: { title: "Operational command view", description: "Monitor intake, routing, review demand, and quality from one workspace." },
+  review: { title: "Human review queue", description: "Resolve critical escalations and uncertain recommendations before downstream action." },
+  routing: { title: "Routing control center", description: "Inspect queue workload, classification logic, keywords, and human-review policies." },
+  evaluations: { title: "Quality evaluation lab", description: "Review benchmark performance across 300 labeled synthetic interactions." },
+};
 
 const elements = {
   table: document.querySelector("#caseTable"),
@@ -22,13 +29,13 @@ async function request(path, options = {}) {
 }
 
 async function loadData() {
-  [state.cases, state.metrics, state.evaluation] = await Promise.all([request("/api/cases"), request("/api/metrics"), request("/api/evaluation")]);
+  [state.cases, state.metrics, state.evaluation, state.routingRules] = await Promise.all([request("/api/cases"), request("/api/metrics"), request("/api/evaluation"), request("/api/routing-rules")]);
   render();
 }
 
 function visibleCases() {
   if (state.filter === "priority") return state.cases.filter(item => ["critical", "high"].includes(item.priority));
-  if (state.filter === "review") return state.cases.filter(item => item.flags.includes("low-confidence") || item.status === "escalated");
+  if (state.filter === "review") return state.cases.filter(item => item.flags.includes("low-confidence") || ["critical", "high"].includes(item.priority));
   return state.cases;
 }
 
@@ -37,6 +44,7 @@ function renderMetrics() {
   elements.averageConfidence.textContent = formatPercent(state.metrics.average_confidence);
   elements.priorityCases.textContent = state.metrics.high_priority_cases;
   elements.hoursSaved.textContent = `${state.metrics.estimated_hours_saved} hrs`;
+  document.querySelector("#reviewCount").textContent = state.cases.filter(item => item.flags.includes("low-confidence") || ["critical", "high"].includes(item.priority)).length;
 }
 
 function renderTable() {
@@ -57,6 +65,15 @@ function renderChart() {
   const maximum = Math.max(...entries.map(([, count]) => count), 1);
   elements.queueChart.innerHTML = entries.map(([queue, count]) => `
     <div class="bar-row"><span>${queue}</span><div class="bar-track"><span style="width:${(count / maximum) * 100}%"></span></div><strong>${count}</strong></div>
+  `).join("");
+}
+
+function renderRoutingRules() {
+  document.querySelector("#routingRules").innerHTML = state.routingRules.map(rule => `
+    <article class="routing-rule">
+      <header><div><strong>${titleCase(rule.category)}</strong><small>${rule.queue}</small></div><span class="review-policy ${rule.requires_human_review ? "" : "auto"}">${rule.requires_human_review ? "Human review" : "Eligible to automate"}</span></header>
+      <p>${rule.keywords.length ? `Signals: ${rule.keywords.slice(0, 8).join(", ")}` : "Fallback route for unmatched or uncertain interactions."}</p>
+    </article>
   `).join("");
 }
 
@@ -94,7 +111,31 @@ function selectCase(caseId) {
   renderTable();
 }
 
-function render() { renderMetrics(); renderTable(); renderChart(); renderEvaluation(); if (state.selectedId) selectCase(state.selectedId); }
+function render() { renderMetrics(); renderTable(); renderChart(); renderRoutingRules(); renderEvaluation(); if (state.selectedId) selectCase(state.selectedId); }
+
+function setView(view, updateHash = true) {
+  state.view = views[view] ? view : "overview";
+  document.body.dataset.currentView = state.view;
+  document.querySelector("#pageTitle").textContent = views[state.view].title;
+  document.querySelector("#pageDescription").textContent = views[state.view].description;
+  document.querySelectorAll(".nav-item[data-view]").forEach(button => button.classList.toggle("active", button.dataset.view === state.view));
+  document.querySelectorAll(".view-section").forEach(section => section.classList.toggle("hidden", !section.dataset.views.split(" ").includes(state.view)));
+
+  if (state.view === "review") {
+    state.filter = "review";
+    document.querySelector("#queueEyebrow").textContent = "Human-in-the-loop";
+    document.querySelector("#queueTitle").textContent = "Cases requiring review";
+  } else {
+    if (state.view === "overview") state.filter = "all";
+    document.querySelector("#queueEyebrow").textContent = "Live workflow";
+    document.querySelector("#queueTitle").textContent = "Interaction queue";
+  }
+  document.querySelectorAll(".filter").forEach(button => button.classList.toggle("active", button.dataset.filter === state.filter));
+  renderTable();
+  if (updateHash) history.replaceState(null, "", `#${state.view}`);
+}
+
+document.querySelectorAll(".nav-item[data-view]").forEach(button => button.addEventListener("click", () => setView(button.dataset.view)));
 
 document.querySelector("#filters").addEventListener("click", event => {
   if (!event.target.matches("[data-filter]")) return;
@@ -120,4 +161,4 @@ document.querySelector("#reviewButton").addEventListener("click", async () => {
 });
 document.querySelector("#resetButton").addEventListener("click", async () => { state.selectedId = null; await request("/api/reset", { method: "POST" }); elements.caseDetail.classList.add("hidden"); elements.emptyState.classList.remove("hidden"); await loadData(); });
 
-loadData().catch(error => { elements.table.innerHTML = `<tr><td colspan="5">Unable to load demo: ${error.message}</td></tr>`; });
+loadData().then(() => setView(location.hash.slice(1) || "overview", false)).catch(error => { elements.table.innerHTML = `<tr><td colspan="5">Unable to load demo: ${error.message}</td></tr>`; });

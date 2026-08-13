@@ -47,14 +47,18 @@ def _extract_fields(text: str) -> dict[str, str]:
     extracted: dict[str, str] = {}
     email_match = re.search(r"[\w.+-]+@[\w-]+\.[\w.-]+", text, re.IGNORECASE)
     case_match = re.search(r"\b(?:case|order|incident|ticket)[\s#:.-]*([A-Z0-9-]{5,})\b", text, re.IGNORECASE)
-    site_match = re.search(r"\b(?:site|location)[\s#:.-]*([A-Z]{2,5}\d{1,4})\b", text, re.IGNORECASE)
+    location_match = re.search(
+        r"\b(?:campus|location|facility)[\s#:.-]*([A-Za-z][A-Za-z ]{2,30}?)(?=[,.])",
+        text,
+        re.IGNORECASE,
+    )
 
     if email_match:
         extracted["email"] = email_match.group(0)
     if case_match:
         extracted["reference"] = case_match.group(1).upper()
-    if site_match:
-        extracted["site"] = site_match.group(1).upper()
+    if location_match:
+        extracted["location"] = location_match.group(1).strip().title()
     return extracted
 
 
@@ -113,3 +117,22 @@ def analyze_transcript(transcript: str) -> dict[str, object]:
         "handoff_summary": handoff_summary,
         "estimated_minutes_saved": round(2.5 + len(extracted_fields) * 0.75 + len(best_matches) * 0.35, 1),
     }
+
+
+def get_routing_rules() -> list[dict[str, object]]:
+    return [
+        {
+            "category": rule.category,
+            "queue": rule.queue,
+            "keywords": list(rule.keywords),
+            "requires_human_review": rule.category in {"safety_incident", "property_damage"},
+        }
+        for rule in ROUTE_RULES
+    ] + [
+        {
+            "category": "general_support",
+            "queue": "General Operations",
+            "keywords": [],
+            "requires_human_review": True,
+        }
+    ]

@@ -19,10 +19,10 @@
           </div>
         </div>
         <nav aria-label="Primary navigation">
-          <button class="nav-item active"><span>◫</span> Overview</button>
-          <button class="nav-item"><span>◎</span> Review queue</button>
-          <button class="nav-item"><span>↗</span> Routing</button>
-          <button class="nav-item"><span>◇</span> Evaluations</button>
+          <button class="nav-item active" data-view="overview"><span>◫</span> Overview</button>
+          <button class="nav-item" data-view="review"><span>◎</span> Review queue <b id="reviewCount">0</b></button>
+          <button class="nav-item" data-view="routing"><span>↗</span> Routing</button>
+          <button class="nav-item" data-view="evaluations"><span>◇</span> Evaluations</button>
         </nav>
         <div class="sidebar-note">
           <span class="live-dot"></span>
@@ -34,7 +34,8 @@
         <header class="topbar">
           <div>
             <p class="eyebrow">AI Operations Triage & Quality Platform</p>
-            <h1>Operational command view</h1>
+            <h1 id="pageTitle">Operational command view</h1>
+            <p class="page-description" id="pageDescription">Monitor intake, routing, review demand, and quality from one workspace.</p>
           </div>
           <div class="header-actions">
             <button class="button ghost" id="resetButton">Reset demo</button>
@@ -42,7 +43,7 @@
           </div>
         </header>
 
-        <section class="hero-grid" aria-label="Performance summary">
+        <section class="hero-grid view-section" data-views="overview" aria-label="Performance summary">
           <article class="metric-card accent">
             <div class="metric-label"><span>Automation rate</span><span class="metric-icon">↗</span></div>
             <strong id="automationRate">—</strong>
@@ -65,12 +66,12 @@
           </article>
         </section>
 
-        <section class="workspace-grid">
+        <section class="workspace-grid view-section" data-views="overview review">
           <article class="panel cases-panel">
             <div class="panel-header">
               <div>
-                <p class="eyebrow">Live workflow</p>
-                <h2>Interaction queue</h2>
+                <p class="eyebrow" id="queueEyebrow">Live workflow</p>
+                <h2 id="queueTitle">Interaction queue</h2>
               </div>
               <div class="filters" id="filters">
                 <button class="filter active" data-filter="all">All</button>
@@ -112,12 +113,13 @@
           </aside>
         </section>
 
-        <section class="panel analytics-panel">
+        <section class="panel analytics-panel view-section" data-views="overview routing">
           <div class="panel-header"><div><p class="eyebrow">Evaluation layer</p><h2>Routing distribution</h2></div><span class="verified-label">Human-in-the-loop</span></div>
           <div class="bar-chart" id="queueChart"></div>
+          <div class="routing-rules" id="routingRules"></div>
         </section>
 
-        <section class="panel benchmark-panel">
+        <section class="panel benchmark-panel view-section" data-views="overview evaluations">
           <div class="panel-header">
             <div><p class="eyebrow">Offline benchmark</p><h2>300-case quality evaluation</h2></div>
             <span class="verified-label">Reproducible synthetic dataset</span>
@@ -137,7 +139,7 @@
       <form id="caseForm">
         <div class="modal-heading"><div><p class="eyebrow">Workflow simulator</p><h2>Create interaction</h2></div><button type="button" class="close-button" id="closeDialog">×</button></div>
         <label>Channel<select id="sourceInput"><option value="voice">Voice</option><option value="chat">Chat</option><option value="email">Email</option><option value="web">Web</option></select></label>
-        <label>Interaction transcript<textarea id="transcriptInput" rows="7" minlength="20" required>A customer reports a vehicle collision at site PHX7. One person is hurt and incident INC-48291 requires escalation.</textarea></label>
+        <label>Interaction transcript<textarea id="transcriptInput" rows="7" minlength="20" required>A caller reports a vehicle collision at location North Campus. One person is hurt and incident INC-48291 requires escalation.</textarea></label>
         <p class="form-note">The demo uses deterministic, explainable classification rules and synthetic data.</p>
         <button class="button primary full" type="submit">Analyze and route</button>
       </form>
