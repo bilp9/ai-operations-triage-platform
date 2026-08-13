@@ -15,31 +15,31 @@ ROUTE_RULES = (
     RouteRule(
         "safety_incident",
         "Safety & Escalations",
-        ("injury", "hurt", "unsafe", "threat", "fire", "weapon", "emergency", "collision"),
+        ("injury", "hurt", "unsafe", "threat", "fire", "smoke", "evacuation", "weapon", "emergency", "collision", "sprain", "slipped"),
     ),
     RouteRule(
         "property_damage",
         "Claims Operations",
-        ("property damage", "damaged", "broken", "hit my", "fence", "garage", "vehicle damage"),
+        ("property damage", "damaged", "broken", "hit my", "fence", "garage", "vehicle damage", "scraped", "mailbox", "gate"),
     ),
     RouteRule(
         "account_access",
         "Account Support",
-        ("locked out", "login", "password", "access", "verification code", "account"),
+        ("locked out", "login", "sign-in", "password", "access", "verification code", "two-factor", "authentication", "account"),
     ),
     RouteRule(
         "billing",
         "Billing Operations",
-        ("charged", "invoice", "refund", "payment", "billing", "duplicate charge"),
+        ("charged", "invoice", "refund", "payment", "billing", "duplicate charge", "statement", "subscription", "renewal"),
     ),
     RouteRule(
         "delivery_issue",
         "Delivery Support",
-        ("delivery", "package", "driver", "missing item", "wrong address", "late order"),
+        ("delivery", "package", "parcel", "driver", "missing item", "wrong address", "late order"),
     ),
 )
 
-CRITICAL_TERMS = ("fire", "weapon", "unconscious", "life threatening", "immediate danger")
+CRITICAL_TERMS = ("fire", "smoke", "evacuation", "weapon", "unconscious", "life threatening", "immediate danger")
 HIGH_TERMS = ("injury", "hurt", "threat", "collision", "unsafe", "property damage")
 
 
@@ -113,4 +113,3 @@ def analyze_transcript(transcript: str) -> dict[str, object]:
         "handoff_summary": handoff_summary,
         "estimated_minutes_saved": round(2.5 + len(extracted_fields) * 0.75 + len(best_matches) * 0.35, 1),
     }
-

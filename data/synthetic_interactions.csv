@@ -1,0 +1,301 @@
+interaction_id,channel,transcript,expected_category,expected_queue,expected_priority,expected_escalation,synthetic,generation_seed
+EVAL-0079,web,"For context, this started earlier today. The courier scraped a parked car and left visible damage. Reference SYN-00079. Please document the next action.",property_damage,Claims Operations,high,true,true,20260813
+EVAL-0217,chat,One missing item was not included in delivery SYN-00217.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0168,voice,Please explain the billing terms on invoice SYN-00168. Contact me at demo.user168@example.com.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0062,email,The delivery driver damaged the garage at location AZ21. Claim case SYN-00062.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0154,email,The amount on statement SYN-00154 is incorrect and I need an adjustment.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0223,web,"The driver marked order SYN-00223 complete, but nothing arrived.",delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0226,email,My package for order SYN-00226 was delivered to the wrong address.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0047,web,An associate slipped and may have a sprain at site AZ23. Please escalate report SYN-00047.,safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0030,email,Heavy smoke is spreading through the loading area at AZ23; evacuation is underway for report SYN-00030.,safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0181,chat,I was charged twice for invoice SYN-00181 and need a refund for the duplicate charge.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0132,voice,My password reset link fails every time. Account email: demo.user132@example.com. Ticket SYN-00132.,account_access,Account Support,medium,false,true,20260813
+EVAL-0202,email,One missing item was not included in delivery SYN-00202.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0089,chat,The courier scraped a parked car and left visible damage. Reference SYN-00089.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0128,voice,I cannot login after changing phones. Please restore access for demo.user128@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0265,chat,"For context, this started earlier today. Please confirm who owns follow-up for reference SYN-00265. Please document the next action.",general_support,General Operations,low,false,true,20260813
+EVAL-0195,web,A subscription renewal posted unexpectedly under reference SYN-00195.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0253,chat,Where can I find the current service hours for location AZ25?,general_support,General Operations,low,false,true,20260813
+EVAL-0258,email,"For context, this started earlier today. Where can I find the current service hours for location AZ13? Please document the next action.",general_support,General Operations,low,false,true,20260813
+EVAL-0155,web,A subscription renewal posted unexpectedly under reference SYN-00155.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0245,chat,The parcel for order SYN-00245 went to a neighbor and the photo confirms it.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0278,email,Where can I find the current service hours for location AZ16?,general_support,General Operations,low,false,true,20260813
+EVAL-0044,voice,The driver says the area is unsafe after a threat near location AZ20. Ticket SYN-00044 was opened.,safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0273,chat,Where can I find the current service hours for location AZ11?,general_support,General Operations,low,false,true,20260813
+EVAL-0094,email,The courier scraped a parked car and left visible damage. Reference SYN-00094.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0266,email,I need help understanding the policy connected with case SYN-00266.,general_support,General Operations,low,false,true,20260813
+EVAL-0124,voice,The sign-in page loops back to verification and never lets me continue. Contact demo.user124@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0131,web,I am locked out of my account and the verification code is not arriving at demo.user131@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0204,voice,My late order SYN-00204 has not moved for three days.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0285,chat,Please confirm who owns follow-up for reference SYN-00285.,general_support,General Operations,low,false,true,20260813
+EVAL-0198,email,Please explain the billing terms on invoice SYN-00198. Contact me at demo.user198@example.com.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0185,chat,A subscription renewal posted unexpectedly under reference SYN-00185.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0201,chat,"For context, this started earlier today. My package for order SYN-00201 was delivered to the wrong address. Please document the next action.",delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0035,web,An associate slipped and may have a sprain at site AZ11. Please escalate report SYN-00035.,safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0121,chat,I am locked out of my account and the verification code is not arriving at demo.user121@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0067,web,The delivery driver damaged the garage at location AZ26. Claim case SYN-00067.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0043,web,"For context, this started earlier today. A caller reported a collision at site AZ19. One person is hurt and incident SYN-00043 needs review. Please document the next action.",safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0174,email,The amount on statement SYN-00174 is incorrect and I need an adjustment.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0099,web,The courier scraped a parked car and left visible damage. Reference SYN-00099.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0076,voice,A vehicle hit my fence and caused property damage. Case SYN-00076; nobody is injured.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0111,web,I am locked out of my account and the verification code is not arriving at demo.user111@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0038,email,The driver says the area is unsafe after a threat near location AZ14. Ticket SYN-00038 was opened.,safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0109,chat,The sign-in page loops back to verification and never lets me continue. Contact demo.user109@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0033,chat,There is a fire at location AZ26 and people may be in immediate danger. Incident SYN-00033.,safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0092,voice,The delivery driver damaged the garage at location AZ17. Claim case SYN-00092.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0219,web,My late order SYN-00219 has not moved for three days.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0146,email,I am locked out of my account and the verification code is not arriving at demo.user146@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0199,web,The amount on statement SYN-00199 is incorrect and I need an adjustment.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0244,voice,My late order SYN-00244 has not moved for three days.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0165,chat,"For context, this started earlier today. A subscription renewal posted unexpectedly under reference SYN-00165. Please document the next action.",billing,Billing Operations,medium,false,true,20260813
+EVAL-0100,voice,"For context, this started earlier today. A mailbox was knocked over during delivery for order SYN-00100. No one was hurt. Please document the next action.",property_damage,Claims Operations,high,true,true,20260813
+EVAL-0090,email,A mailbox was knocked over during delivery for order SYN-00090. No one was hurt.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0072,voice,"For context, this started earlier today. The delivery driver damaged the garage at location AZ14. Claim case SYN-00072. Please document the next action.",property_damage,Claims Operations,high,true,true,20260813
+EVAL-0110,email,Two-factor authentication rejects every code for user demo.user110@example.com; case SYN-00110.,account_access,Account Support,medium,false,true,20260813
+EVAL-0249,chat,My late order SYN-00249 has not moved for three days.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0196,voice,I was charged twice for invoice SYN-00196 and need a refund for the duplicate charge.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0085,chat,A mailbox was knocked over during delivery for order SYN-00085. No one was hurt.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0010,email,A weapon was reported near site AZ20. This is an emergency linked to case SYN-00010.,safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0125,chat,Two-factor authentication rejects every code for user demo.user125@example.com; case SYN-00125.,account_access,Account Support,medium,false,true,20260813
+EVAL-0073,chat,My gate was broken during the stop. Order SYN-00073 is connected to the report.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0192,voice,Payment for invoice SYN-00192 shows pending even though the bank approved it.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0087,web,The delivery driver damaged the garage at location AZ12. Claim case SYN-00087.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0152,voice,Payment for invoice SYN-00152 shows pending even though the bank approved it.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0220,voice,The parcel for order SYN-00220 went to a neighbor and the photo confirms it.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0177,chat,Payment for invoice SYN-00177 shows pending even though the bank approved it.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0145,chat,Two-factor authentication rejects every code for user demo.user145@example.com; case SYN-00145.,account_access,Account Support,medium,false,true,20260813
+EVAL-0229,chat,"For context, this started earlier today. My late order SYN-00229 has not moved for three days. Please document the next action.",delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0011,web,An associate slipped and may have a sprain at site AZ21. Please escalate report SYN-00011.,safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0259,web,I have a general question and would like someone to contact me at demo.user259@example.com.,general_support,General Operations,low,false,true,20260813
+EVAL-0193,chat,"For context, this started earlier today. Please explain the billing terms on invoice SYN-00193. Contact me at demo.user193@example.com. Please document the next action.",billing,Billing Operations,medium,false,true,20260813
+EVAL-0237,chat,One missing item was not included in delivery SYN-00237.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0107,web,My password reset link fails every time. Account email: demo.user107@example.com. Ticket SYN-00107.,account_access,Account Support,medium,false,true,20260813
+EVAL-0032,voice,The driver says the area is unsafe after a threat near location AZ25. Ticket SYN-00032 was opened.,safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0209,chat,My late order SYN-00209 has not moved for three days.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0254,email,I have a general question and would like someone to contact me at demo.user254@example.com.,general_support,General Operations,low,false,true,20260813
+EVAL-0097,chat,The delivery driver damaged the garage at location AZ22. Claim case SYN-00097.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0054,email,The courier scraped a parked car and left visible damage. Reference SYN-00054.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0224,voice,My late order SYN-00224 has not moved for three days.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0264,voice,I have a general question and would like someone to contact me at demo.user264@example.com.,general_support,General Operations,low,false,true,20260813
+EVAL-0225,chat,The parcel for order SYN-00225 went to a neighbor and the photo confirms it.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0262,email,Please update the contact name on ticket SYN-00262. This is not urgent.,general_support,General Operations,low,false,true,20260813
+EVAL-0113,chat,I cannot login after changing phones. Please restore access for demo.user113@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0216,voice,My package for order SYN-00216 was delivered to the wrong address.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0060,voice,A mailbox was knocked over during delivery for order SYN-00060. No one was hurt.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0257,chat,Please update the contact name on ticket SYN-00257. This is not urgent.,general_support,General Operations,low,false,true,20260813
+EVAL-0287,web,Please update the contact name on ticket SYN-00287. This is not urgent.,general_support,General Operations,low,false,true,20260813
+EVAL-0239,web,My late order SYN-00239 has not moved for three days.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0029,chat,"For context, this started earlier today. An associate slipped and may have a sprain at site AZ22. Please escalate report SYN-00029. Please document the next action.",safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0218,email,"The driver marked order SYN-00218 complete, but nothing arrived.",delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0171,web,I was charged twice for invoice SYN-00171 and need a refund for the duplicate charge.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0084,voice,The courier scraped a parked car and left visible damage. Reference SYN-00084.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0214,email,My late order SYN-00214 has not moved for three days.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0120,voice,Two-factor authentication rejects every code for user demo.user120@example.com; case SYN-00120.,account_access,Account Support,medium,false,true,20260813
+EVAL-0289,chat,I have a general question and would like someone to contact me at demo.user289@example.com.,general_support,General Operations,low,false,true,20260813
+EVAL-0286,email,"For context, this started earlier today. I need help understanding the policy connected with case SYN-00286. Please document the next action.",general_support,General Operations,low,false,true,20260813
+EVAL-0042,email,Heavy smoke is spreading through the loading area at AZ18; evacuation is underway for report SYN-00042.,safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0186,email,"For context, this started earlier today. I was charged twice for invoice SYN-00186 and need a refund for the duplicate charge. Please document the next action.",billing,Billing Operations,medium,false,true,20260813
+EVAL-0288,voice,Where can I find the current service hours for location AZ26?,general_support,General Operations,low,false,true,20260813
+EVAL-0212,voice,One missing item was not included in delivery SYN-00212.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0088,voice,My gate was broken during the stop. Order SYN-00088 is connected to the report.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0093,chat,"For context, this started earlier today. My gate was broken during the stop. Order SYN-00093 is connected to the report. Please document the next action.",property_damage,Claims Operations,high,true,true,20260813
+EVAL-0114,email,The sign-in page loops back to verification and never lets me continue. Contact demo.user114@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0233,chat,"The driver marked order SYN-00233 complete, but nothing arrived.",delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0082,email,The delivery driver damaged the garage at location AZ24. Claim case SYN-00082.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0271,web,I need help understanding the policy connected with case SYN-00271.,general_support,General Operations,low,false,true,20260813
+EVAL-0140,voice,Two-factor authentication rejects every code for user demo.user140@example.com; case SYN-00140.,account_access,Account Support,medium,false,true,20260813
+EVAL-0098,email,My gate was broken during the stop. Order SYN-00098 is connected to the report.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0001,chat,"For context, this started earlier today. A caller reported a collision at site AZ11. One person is hurt and incident SYN-00001 needs review. Please document the next action.",safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0144,voice,The sign-in page loops back to verification and never lets me continue. Contact demo.user144@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0275,web,Please confirm who owns follow-up for reference SYN-00275.,general_support,General Operations,low,false,true,20260813
+EVAL-0157,chat,Payment for invoice SYN-00157 shows pending even though the bank approved it.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0272,voice,"For context, this started earlier today. Please update the contact name on ticket SYN-00272. This is not urgent. Please document the next action.",general_support,General Operations,low,false,true,20260813
+EVAL-0081,chat,A vehicle hit my fence and caused property damage. Case SYN-00081; nobody is injured.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0078,email,My gate was broken during the stop. Order SYN-00078 is connected to the report.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0129,chat,"For context, this started earlier today. The sign-in page loops back to verification and never lets me continue. Contact demo.user129@example.com. Please document the next action.",account_access,Account Support,medium,false,true,20260813
+EVAL-0050,email,"For context, this started earlier today. The driver says the area is unsafe after a threat near location AZ26. Ticket SYN-00050 was opened. Please document the next action.",safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0108,voice,"For context, this started earlier today. I cannot login after changing phones. Please restore access for demo.user108@example.com. Please document the next action.",account_access,Account Support,medium,false,true,20260813
+EVAL-0149,chat,The sign-in page loops back to verification and never lets me continue. Contact demo.user149@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0040,voice,A weapon was reported near site AZ16. This is an emergency linked to case SYN-00040.,safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0059,web,The courier scraped a parked car and left visible damage. Reference SYN-00059.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0046,email,A weapon was reported near site AZ22. This is an emergency linked to case SYN-00046.,safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0252,voice,Please update the contact name on ticket SYN-00252. This is not urgent.,general_support,General Operations,low,false,true,20260813
+EVAL-0148,voice,I cannot login after changing phones. Please restore access for demo.user148@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0236,voice,"For context, this started earlier today. My package for order SYN-00236 was delivered to the wrong address. Please document the next action.",delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0002,email,The driver says the area is unsafe after a threat near location AZ12. Ticket SYN-00002 was opened.,safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0065,chat,"For context, this started earlier today. A mailbox was knocked over during delivery for order SYN-00065. No one was hurt. Please document the next action.",property_damage,Claims Operations,high,true,true,20260813
+EVAL-0083,web,My gate was broken during the stop. Order SYN-00083 is connected to the report.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0039,web,There is a fire at location AZ15 and people may be in immediate danger. Incident SYN-00039.,safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0167,web,Payment for invoice SYN-00167 shows pending even though the bank approved it.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0260,voice,Please confirm who owns follow-up for reference SYN-00260.,general_support,General Operations,low,false,true,20260813
+EVAL-0197,chat,Payment for invoice SYN-00197 shows pending even though the bank approved it.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0250,email,"For context, this started earlier today. The parcel for order SYN-00250 went to a neighbor and the photo confirms it. Please document the next action.",delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0106,email,I am locked out of my account and the verification code is not arriving at demo.user106@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0069,chat,The courier scraped a parked car and left visible damage. Reference SYN-00069.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0178,email,Please explain the billing terms on invoice SYN-00178. Contact me at demo.user178@example.com.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0238,email,"The driver marked order SYN-00238 complete, but nothing arrived.",delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0031,web,A caller reported a collision at site AZ24. One person is hurt and incident SYN-00031 needs review.,safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0156,voice,I was charged twice for invoice SYN-00156 and need a refund for the duplicate charge.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0222,email,"For context, this started earlier today. One missing item was not included in delivery SYN-00222. Please document the next action.",delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0292,voice,Please update the contact name on ticket SYN-00292. This is not urgent.,general_support,General Operations,low,false,true,20260813
+EVAL-0141,chat,I am locked out of my account and the verification code is not arriving at demo.user141@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0052,voice,The delivery driver damaged the garage at location AZ11. Claim case SYN-00052.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0299,web,I have a general question and would like someone to contact me at demo.user299@example.com.,general_support,General Operations,low,false,true,20260813
+EVAL-0019,web,A caller reported a collision at site AZ12. One person is hurt and incident SYN-00019 needs review.,safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0235,web,The parcel for order SYN-00235 went to a neighbor and the photo confirms it.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0283,web,Where can I find the current service hours for location AZ21?,general_support,General Operations,low,false,true,20260813
+EVAL-0014,email,The driver says the area is unsafe after a threat near location AZ24. Ticket SYN-00014 was opened.,safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0162,email,Payment for invoice SYN-00162 shows pending even though the bank approved it.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0086,email,"For context, this started earlier today. A vehicle hit my fence and caused property damage. Case SYN-00086; nobody is injured. Please document the next action.",property_damage,Claims Operations,high,true,true,20260813
+EVAL-0290,email,Please confirm who owns follow-up for reference SYN-00290.,general_support,General Operations,low,false,true,20260813
+EVAL-0175,web,A subscription renewal posted unexpectedly under reference SYN-00175.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0261,chat,I need help understanding the policy connected with case SYN-00261.,general_support,General Operations,low,false,true,20260813
+EVAL-0296,voice,I need help understanding the policy connected with case SYN-00296.,general_support,General Operations,low,false,true,20260813
+EVAL-0034,email,A weapon was reported near site AZ10. This is an emergency linked to case SYN-00034.,safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0142,email,My password reset link fails every time. Account email: demo.user142@example.com. Ticket SYN-00142.,account_access,Account Support,medium,false,true,20260813
+EVAL-0263,web,Where can I find the current service hours for location AZ18?,general_support,General Operations,low,false,true,20260813
+EVAL-0191,web,I was charged twice for invoice SYN-00191 and need a refund for the duplicate charge.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0048,voice,Heavy smoke is spreading through the loading area at AZ24; evacuation is underway for report SYN-00048.,safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0135,web,Two-factor authentication rejects every code for user demo.user135@example.com; case SYN-00135.,account_access,Account Support,medium,false,true,20260813
+EVAL-0182,email,Payment for invoice SYN-00182 shows pending even though the bank approved it.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0008,voice,"For context, this started earlier today. The driver says the area is unsafe after a threat near location AZ18. Ticket SYN-00008 was opened. Please document the next action.",safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0064,voice,The courier scraped a parked car and left visible damage. Reference SYN-00064.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0005,chat,An associate slipped and may have a sprain at site AZ15. Please escalate report SYN-00005.,safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0241,chat,My package for order SYN-00241 was delivered to the wrong address.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0176,voice,I was charged twice for invoice SYN-00176 and need a refund for the duplicate charge.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0291,web,I need help understanding the policy connected with case SYN-00291.,general_support,General Operations,low,false,true,20260813
+EVAL-0161,chat,I was charged twice for invoice SYN-00161 and need a refund for the duplicate charge.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0268,voice,Where can I find the current service hours for location AZ23?,general_support,General Operations,low,false,true,20260813
+EVAL-0118,email,I cannot login after changing phones. Please restore access for demo.user118@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0150,email,"For context, this started earlier today. Two-factor authentication rejects every code for user demo.user150@example.com; case SYN-00150. Please document the next action.",account_access,Account Support,medium,false,true,20260813
+EVAL-0013,chat,A caller reported a collision at site AZ23. One person is hurt and incident SYN-00013 needs review.,safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0068,voice,My gate was broken during the stop. Order SYN-00068 is connected to the report.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0210,email,The parcel for order SYN-00210 went to a neighbor and the photo confirms it.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0023,web,An associate slipped and may have a sprain at site AZ16. Please escalate report SYN-00023.,safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0104,voice,The sign-in page loops back to verification and never lets me continue. Contact demo.user104@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0207,web,One missing item was not included in delivery SYN-00207.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0122,email,"For context, this started earlier today. My password reset link fails every time. Account email: demo.user122@example.com. Ticket SYN-00122. Please document the next action.",account_access,Account Support,medium,false,true,20260813
+EVAL-0006,email,Heavy smoke is spreading through the loading area at AZ16; evacuation is underway for report SYN-00006.,safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0018,email,Heavy smoke is spreading through the loading area at AZ11; evacuation is underway for report SYN-00018.,safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0049,chat,A caller reported a collision at site AZ25. One person is hurt and incident SYN-00049 needs review.,safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0170,email,A subscription renewal posted unexpectedly under reference SYN-00170.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0211,web,My package for order SYN-00211 was delivered to the wrong address.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0116,voice,I am locked out of my account and the verification code is not arriving at demo.user116@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0055,web,A mailbox was knocked over during delivery for order SYN-00055. No one was hurt.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0240,voice,The parcel for order SYN-00240 went to a neighbor and the photo confirms it.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0015,web,"For context, this started earlier today. There is a fire at location AZ25 and people may be in immediate danger. Incident SYN-00015. Please document the next action.",safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0172,voice,"For context, this started earlier today. Payment for invoice SYN-00172 shows pending even though the bank approved it. Please document the next action.",billing,Billing Operations,medium,false,true,20260813
+EVAL-0009,chat,There is a fire at location AZ19 and people may be in immediate danger. Incident SYN-00009.,safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0298,email,Where can I find the current service hours for location AZ19?,general_support,General Operations,low,false,true,20260813
+EVAL-0017,chat,An associate slipped and may have a sprain at site AZ10. Please escalate report SYN-00017.,safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0203,web,"The driver marked order SYN-00203 complete, but nothing arrived.",delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0112,voice,My password reset link fails every time. Account email: demo.user112@example.com. Ticket SYN-00112.,account_access,Account Support,medium,false,true,20260813
+EVAL-0007,web,A caller reported a collision at site AZ17. One person is hurt and incident SYN-00007 needs review.,safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0231,web,My package for order SYN-00231 was delivered to the wrong address.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0246,email,My package for order SYN-00246 was delivered to the wrong address.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0022,email,"For context, this started earlier today. A weapon was reported near site AZ15. This is an emergency linked to case SYN-00022. Please document the next action.",safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0127,web,My password reset link fails every time. Account email: demo.user127@example.com. Ticket SYN-00127.,account_access,Account Support,medium,false,true,20260813
+EVAL-0136,voice,"For context, this started earlier today. I am locked out of my account and the verification code is not arriving at demo.user136@example.com. Please document the next action.",account_access,Account Support,medium,false,true,20260813
+EVAL-0206,email,My package for order SYN-00206 was delivered to the wrong address.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0137,chat,My password reset link fails every time. Account email: demo.user137@example.com. Ticket SYN-00137.,account_access,Account Support,medium,false,true,20260813
+EVAL-0256,voice,I need help understanding the policy connected with case SYN-00256.,general_support,General Operations,low,false,true,20260813
+EVAL-0101,chat,"For context, this started earlier today. I am locked out of my account and the verification code is not arriving at demo.user101@example.com. Please document the next action.",account_access,Account Support,medium,false,true,20260813
+EVAL-0163,web,Please explain the billing terms on invoice SYN-00163. Contact me at demo.user163@example.com.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0041,chat,An associate slipped and may have a sprain at site AZ17. Please escalate report SYN-00041.,safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0133,chat,I cannot login after changing phones. Please restore access for demo.user133@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0200,voice,"For context, this started earlier today. A subscription renewal posted unexpectedly under reference SYN-00200. Please document the next action.",billing,Billing Operations,medium,false,true,20260813
+EVAL-0123,web,I cannot login after changing phones. Please restore access for demo.user123@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0169,chat,The amount on statement SYN-00169 is incorrect and I need an adjustment.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0139,web,The sign-in page loops back to verification and never lets me continue. Contact demo.user139@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0091,web,A vehicle hit my fence and caused property damage. Case SYN-00091; nobody is injured.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0063,web,My gate was broken during the stop. Order SYN-00063 is connected to the report.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0270,email,Please confirm who owns follow-up for reference SYN-00270.,general_support,General Operations,low,false,true,20260813
+EVAL-0066,email,A vehicle hit my fence and caused property damage. Case SYN-00066; nobody is injured.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0173,chat,Please explain the billing terms on invoice SYN-00173. Contact me at demo.user173@example.com.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0153,chat,Please explain the billing terms on invoice SYN-00153. Contact me at demo.user153@example.com.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0138,email,I cannot login after changing phones. Please restore access for demo.user138@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0180,voice,A subscription renewal posted unexpectedly under reference SYN-00180.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0051,web,"For context, this started earlier today. A vehicle hit my fence and caused property damage. Case SYN-00051; nobody is injured. Please document the next action.",property_damage,Claims Operations,high,true,true,20260813
+EVAL-0016,voice,A weapon was reported near site AZ26. This is an emergency linked to case SYN-00016.,safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0057,chat,The delivery driver damaged the garage at location AZ16. Claim case SYN-00057.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0166,email,I was charged twice for invoice SYN-00166 and need a refund for the duplicate charge.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0058,email,"For context, this started earlier today. My gate was broken during the stop. Order SYN-00058 is connected to the report. Please document the next action.",property_damage,Claims Operations,high,true,true,20260813
+EVAL-0295,web,Please confirm who owns follow-up for reference SYN-00295.,general_support,General Operations,low,false,true,20260813
+EVAL-0151,web,"For context, this started earlier today. I was charged twice for invoice SYN-00151 and need a refund for the duplicate charge. Please document the next action.",billing,Billing Operations,medium,false,true,20260813
+EVAL-0251,web,"For context, this started earlier today. I need help understanding the policy connected with case SYN-00251. Please document the next action.",general_support,General Operations,low,false,true,20260813
+EVAL-0024,voice,Heavy smoke is spreading through the loading area at AZ17; evacuation is underway for report SYN-00024.,safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0242,email,One missing item was not included in delivery SYN-00242.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0208,voice,"For context, this started earlier today. The driver marked order SYN-00208 complete, but nothing arrived. Please document the next action.",delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0284,voice,I have a general question and would like someone to contact me at demo.user284@example.com.,general_support,General Operations,low,false,true,20260813
+EVAL-0105,chat,Two-factor authentication rejects every code for user demo.user105@example.com; case SYN-00105.,account_access,Account Support,medium,false,true,20260813
+EVAL-0102,email,My password reset link fails every time. Account email: demo.user102@example.com. Ticket SYN-00102.,account_access,Account Support,medium,false,true,20260813
+EVAL-0255,web,Please confirm who owns follow-up for reference SYN-00255.,general_support,General Operations,low,false,true,20260813
+EVAL-0243,web,"For context, this started earlier today. The driver marked order SYN-00243 complete, but nothing arrived. Please document the next action.",delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0227,web,One missing item was not included in delivery SYN-00227.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0003,web,There is a fire at location AZ13 and people may be in immediate danger. Incident SYN-00003.,safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0115,web,"For context, this started earlier today. Two-factor authentication rejects every code for user demo.user115@example.com; case SYN-00115. Please document the next action.",account_access,Account Support,medium,false,true,20260813
+EVAL-0053,chat,My gate was broken during the stop. Order SYN-00053 is connected to the report.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0020,voice,The driver says the area is unsafe after a threat near location AZ13. Ticket SYN-00020 was opened.,safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0164,voice,The amount on statement SYN-00164 is incorrect and I need an adjustment.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0147,web,My password reset link fails every time. Account email: demo.user147@example.com. Ticket SYN-00147.,account_access,Account Support,medium,false,true,20260813
+EVAL-0282,email,Please update the contact name on ticket SYN-00282. This is not urgent.,general_support,General Operations,low,false,true,20260813
+EVAL-0045,chat,There is a fire at location AZ21 and people may be in immediate danger. Incident SYN-00045.,safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0215,web,"For context, this started earlier today. The parcel for order SYN-00215 went to a neighbor and the photo confirms it. Please document the next action.",delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0027,web,There is a fire at location AZ20 and people may be in immediate danger. Incident SYN-00027.,safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0075,web,A mailbox was knocked over during delivery for order SYN-00075. No one was hurt.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0276,voice,I need help understanding the policy connected with case SYN-00276.,general_support,General Operations,low,false,true,20260813
+EVAL-0004,voice,A weapon was reported near site AZ14. This is an emergency linked to case SYN-00004.,safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0277,chat,Please update the contact name on ticket SYN-00277. This is not urgent.,general_support,General Operations,low,false,true,20260813
+EVAL-0234,email,My late order SYN-00234 has not moved for three days.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0184,voice,The amount on statement SYN-00184 is incorrect and I need an adjustment.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0130,email,Two-factor authentication rejects every code for user demo.user130@example.com; case SYN-00130.,account_access,Account Support,medium,false,true,20260813
+EVAL-0248,voice,"The driver marked order SYN-00248 complete, but nothing arrived.",delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0037,chat,A caller reported a collision at site AZ13. One person is hurt and incident SYN-00037 needs review.,safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0077,chat,The delivery driver damaged the garage at location AZ19. Claim case SYN-00077.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0179,web,"For context, this started earlier today. The amount on statement SYN-00179 is incorrect and I need an adjustment. Please document the next action.",billing,Billing Operations,medium,false,true,20260813
+EVAL-0095,web,A mailbox was knocked over during delivery for order SYN-00095. No one was hurt.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0267,web,Please update the contact name on ticket SYN-00267. This is not urgent.,general_support,General Operations,low,false,true,20260813
+EVAL-0012,voice,Heavy smoke is spreading through the loading area at AZ22; evacuation is underway for report SYN-00012.,safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0269,chat,I have a general question and would like someone to contact me at demo.user269@example.com.,general_support,General Operations,low,false,true,20260813
+EVAL-0188,voice,Please explain the billing terms on invoice SYN-00188. Contact me at demo.user188@example.com.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0134,email,The sign-in page loops back to verification and never lets me continue. Contact demo.user134@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0119,web,The sign-in page loops back to verification and never lets me continue. Contact demo.user119@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0036,voice,"For context, this started earlier today. Heavy smoke is spreading through the loading area at AZ12; evacuation is underway for report SYN-00036. Please document the next action.",safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0158,email,"For context, this started earlier today. Please explain the billing terms on invoice SYN-00158. Contact me at demo.user158@example.com. Please document the next action.",billing,Billing Operations,medium,false,true,20260813
+EVAL-0187,web,Payment for invoice SYN-00187 shows pending even though the bank approved it.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0025,chat,A caller reported a collision at site AZ18. One person is hurt and incident SYN-00025 needs review.,safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0230,email,The parcel for order SYN-00230 went to a neighbor and the photo confirms it.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0074,email,The courier scraped a parked car and left visible damage. Reference SYN-00074.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0247,web,One missing item was not included in delivery SYN-00247.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0189,chat,The amount on statement SYN-00189 is incorrect and I need an adjustment.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0071,web,A vehicle hit my fence and caused property damage. Case SYN-00071; nobody is injured.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0194,email,The amount on statement SYN-00194 is incorrect and I need an adjustment.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0183,web,Please explain the billing terms on invoice SYN-00183. Contact me at demo.user183@example.com.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0297,chat,Please update the contact name on ticket SYN-00297. This is not urgent.,general_support,General Operations,low,false,true,20260813
+EVAL-0279,web,"For context, this started earlier today. I have a general question and would like someone to contact me at demo.user279@example.com. Please document the next action.",general_support,General Operations,low,false,true,20260813
+EVAL-0213,chat,"The driver marked order SYN-00213 complete, but nothing arrived.",delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0080,voice,A mailbox was knocked over during delivery for order SYN-00080. No one was hurt.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0228,voice,"The driver marked order SYN-00228 complete, but nothing arrived.",delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0117,chat,My password reset link fails every time. Account email: demo.user117@example.com. Ticket SYN-00117.,account_access,Account Support,medium,false,true,20260813
+EVAL-0159,web,The amount on statement SYN-00159 is incorrect and I need an adjustment.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0021,chat,There is a fire at location AZ14 and people may be in immediate danger. Incident SYN-00021.,safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0026,email,The driver says the area is unsafe after a threat near location AZ19. Ticket SYN-00026 was opened.,safety_incident,Safety & Escalations,high,true,true,20260813
+EVAL-0126,email,I am locked out of my account and the verification code is not arriving at demo.user126@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0205,chat,The parcel for order SYN-00205 went to a neighbor and the photo confirms it.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0190,email,A subscription renewal posted unexpectedly under reference SYN-00190.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0293,chat,"For context, this started earlier today. Where can I find the current service hours for location AZ14? Please document the next action.",general_support,General Operations,low,false,true,20260813
+EVAL-0294,email,I have a general question and would like someone to contact me at demo.user294@example.com.,general_support,General Operations,low,false,true,20260813
+EVAL-0281,chat,I need help understanding the policy connected with case SYN-00281.,general_support,General Operations,low,false,true,20260813
+EVAL-0061,chat,A vehicle hit my fence and caused property damage. Case SYN-00061; nobody is injured.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0160,voice,A subscription renewal posted unexpectedly under reference SYN-00160.,billing,Billing Operations,medium,false,true,20260813
+EVAL-0300,voice,"For context, this started earlier today. Please confirm who owns follow-up for reference SYN-00300. Please document the next action.",general_support,General Operations,low,false,true,20260813
+EVAL-0280,voice,Please confirm who owns follow-up for reference SYN-00280.,general_support,General Operations,low,false,true,20260813
+EVAL-0221,chat,My package for order SYN-00221 was delivered to the wrong address.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0056,voice,A vehicle hit my fence and caused property damage. Case SYN-00056; nobody is injured.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0103,web,I cannot login after changing phones. Please restore access for demo.user103@example.com.,account_access,Account Support,medium,false,true,20260813
+EVAL-0070,email,A mailbox was knocked over during delivery for order SYN-00070. No one was hurt.,property_damage,Claims Operations,high,true,true,20260813
+EVAL-0028,voice,A weapon was reported near site AZ21. This is an emergency linked to case SYN-00028.,safety_incident,Safety & Escalations,critical,true,true,20260813
+EVAL-0232,voice,One missing item was not included in delivery SYN-00232.,delivery_issue,Delivery Support,medium,false,true,20260813
+EVAL-0274,email,I have a general question and would like someone to contact me at demo.user274@example.com.,general_support,General Operations,low,false,true,20260813
+EVAL-0143,web,"For context, this started earlier today. I cannot login after changing phones. Please restore access for demo.user143@example.com. Please document the next action.",account_access,Account Support,medium,false,true,20260813
+EVAL-0096,voice,A vehicle hit my fence and caused property damage. Case SYN-00096; nobody is injured.,property_damage,Claims Operations,high,true,true,20260813

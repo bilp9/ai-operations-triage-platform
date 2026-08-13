@@ -116,6 +116,20 @@
           <div class="panel-header"><div><p class="eyebrow">Evaluation layer</p><h2>Routing distribution</h2></div><span class="verified-label">Human-in-the-loop</span></div>
           <div class="bar-chart" id="queueChart"></div>
         </section>
+
+        <section class="panel benchmark-panel">
+          <div class="panel-header">
+            <div><p class="eyebrow">Offline benchmark</p><h2>300-case quality evaluation</h2></div>
+            <span class="verified-label">Reproducible synthetic dataset</span>
+          </div>
+          <div class="benchmark-grid">
+            <div class="benchmark-score"><span>Category accuracy</span><strong id="categoryAccuracy">—</strong><small>Correct destination classification</small></div>
+            <div class="benchmark-score"><span>Macro F1</span><strong id="macroF1">—</strong><small>Balanced across six classes</small></div>
+            <div class="benchmark-score safety"><span>Critical recall</span><strong id="criticalRecall">—</strong><small>Critical cases correctly escalated</small></div>
+            <div class="benchmark-score"><span>False automation</span><strong id="falseAutomation">—</strong><small>Incorrect auto-routes</small></div>
+          </div>
+          <div class="class-performance" id="classPerformance"></div>
+        </section>
       </main>
     </div>
 

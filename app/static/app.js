@@ -1,4 +1,4 @@
-const state = { cases: [], metrics: null, selectedId: null, filter: "all" };
+const state = { cases: [], metrics: null, evaluation: null, selectedId: null, filter: "all" };
 
 const elements = {
   table: document.querySelector("#caseTable"),
@@ -22,7 +22,7 @@ async function request(path, options = {}) {
 }
 
 async function loadData() {
-  [state.cases, state.metrics] = await Promise.all([request("/api/cases"), request("/api/metrics")]);
+  [state.cases, state.metrics, state.evaluation] = await Promise.all([request("/api/cases"), request("/api/metrics"), request("/api/evaluation")]);
   render();
 }
 
@@ -60,6 +60,16 @@ function renderChart() {
   `).join("");
 }
 
+function renderEvaluation() {
+  document.querySelector("#categoryAccuracy").textContent = formatPercent(state.evaluation.category_accuracy);
+  document.querySelector("#macroF1").textContent = formatPercent(state.evaluation.macro_f1);
+  document.querySelector("#criticalRecall").textContent = formatPercent(state.evaluation.critical_escalation_recall);
+  document.querySelector("#falseAutomation").textContent = formatPercent(state.evaluation.false_automation_rate);
+  document.querySelector("#classPerformance").innerHTML = Object.entries(state.evaluation.per_class).map(([label, scores]) => `
+    <div class="class-card"><div><strong>${titleCase(label)}</strong><span>F1 ${formatPercent(scores.f1)} · n=${scores.support}</span></div><div class="mini-bar"><span style="width:${scores.f1 * 100}%"></span></div></div>
+  `).join("");
+}
+
 function selectCase(caseId) {
   state.selectedId = caseId;
   const item = state.cases.find(candidate => candidate.id === caseId);
@@ -84,7 +94,7 @@ function selectCase(caseId) {
   renderTable();
 }
 
-function render() { renderMetrics(); renderTable(); renderChart(); if (state.selectedId) selectCase(state.selectedId); }
+function render() { renderMetrics(); renderTable(); renderChart(); renderEvaluation(); if (state.selectedId) selectCase(state.selectedId); }
 
 document.querySelector("#filters").addEventListener("click", event => {
   if (!event.target.matches("[data-filter]")) return;
@@ -111,4 +121,3 @@ document.querySelector("#reviewButton").addEventListener("click", async () => {
 document.querySelector("#resetButton").addEventListener("click", async () => { state.selectedId = null; await request("/api/reset", { method: "POST" }); elements.caseDetail.classList.add("hidden"); elements.emptyState.classList.remove("hidden"); await loadData(); });
 
 loadData().catch(error => { elements.table.innerHTML = `<tr><td colspan="5">Unable to load demo: ${error.message}</td></tr>`; });
-

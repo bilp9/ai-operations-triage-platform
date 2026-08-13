@@ -6,6 +6,7 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
 from app.domain import CaseRecord, IntakeRequest, Metrics, ReviewRequest
+from app.evaluation import evaluate_dataset
 from app.seed import seed_store
 from app.store import store
 
@@ -70,9 +71,13 @@ def get_metrics() -> Metrics:
     return store.metrics()
 
 
+@app.get("/api/evaluation")
+def get_evaluation() -> dict[str, object]:
+    return evaluate_dataset()
+
+
 @app.post("/api/reset", response_model=list[CaseRecord])
 def reset_demo() -> list[CaseRecord]:
     store.clear()
     seed_store(store)
     return store.list()
-

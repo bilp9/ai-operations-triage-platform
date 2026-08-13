@@ -86,7 +86,7 @@ class CaseStore:
             )
 
         reviewed = sum(any(event.action == "human_review" for event in case.audit_trail) for case in cases)
-        auto_routed = sum(case.confidence >= 0.7 and "immediate-escalation" not in case.flags for case in cases)
+        auto_routed = sum(case.confidence >= 0.7 and case.priority not in {"critical", "high"} for case in cases)
         return Metrics(
             total_cases=total,
             automation_rate=round(auto_routed / total, 3),
@@ -100,4 +100,3 @@ class CaseStore:
 
 
 store = CaseStore()
-

@@ -7,11 +7,14 @@ def test_dashboard_and_metrics() -> None:
     with TestClient(app) as client:
         dashboard = client.get("/")
         metrics = client.get("/api/metrics")
+        evaluation = client.get("/api/evaluation")
 
     assert dashboard.status_code == 200
     assert "AI Operations" in dashboard.text
     assert metrics.status_code == 200
     assert metrics.json()["total_cases"] >= 10
+    assert evaluation.status_code == 200
+    assert evaluation.json()["dataset_size"] == 300
 
 
 def test_create_and_review_case() -> None:
@@ -34,4 +37,3 @@ def test_create_and_review_case() -> None:
     assert reviewed.status_code == 200
     assert reviewed.json()["status"] == "resolved"
     assert reviewed.json()["audit_trail"][-1]["action"] == "human_review"
-
