@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Human-in-the-loop AI operations intake, routing, and quality evaluation demo." />
+    <title>AI Operations Triage & Quality Platform</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div>
+            <strong>Operations AI</strong>
+            <small>Control workspace</small>
+          </div>
+        </div>
+        <nav aria-label="Primary navigation">
+          <button class="nav-item active"><span>◫</span> Overview</button>
+          <button class="nav-item"><span>◎</span> Review queue</button>
+          <button class="nav-item"><span>↗</span> Routing</button>
+          <button class="nav-item"><span>◇</span> Evaluations</button>
+        </nav>
+        <div class="sidebar-note">
+          <span class="live-dot"></span>
+          <div><strong>Demo environment</strong><small>Synthetic records only</small></div>
+        </div>
+      </aside>
+
+      <main>
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">AI Operations Triage & Quality Platform</p>
+            <h1>Operational command view</h1>
+          </div>
+          <div class="header-actions">
+            <button class="button ghost" id="resetButton">Reset demo</button>
+            <button class="button primary" id="newCaseButton">+ New interaction</button>
+          </div>
+        </header>
+
+        <section class="hero-grid" aria-label="Performance summary">
+          <article class="metric-card accent">
+            <div class="metric-label"><span>Automation rate</span><span class="metric-icon">↗</span></div>
+            <strong id="automationRate">—</strong>
+            <p>Cases routed without intervention</p>
+          </article>
+          <article class="metric-card">
+            <div class="metric-label"><span>Average confidence</span><span class="metric-icon">◎</span></div>
+            <strong id="averageConfidence">—</strong>
+            <p>Across active classifications</p>
+          </article>
+          <article class="metric-card">
+            <div class="metric-label"><span>Priority review</span><span class="metric-icon warning">!</span></div>
+            <strong id="priorityCases">—</strong>
+            <p>Critical and high-priority cases</p>
+          </article>
+          <article class="metric-card">
+            <div class="metric-label"><span>Estimated time saved</span><span class="metric-icon">◷</span></div>
+            <strong id="hoursSaved">—</strong>
+            <p>Structured intake and routing</p>
+          </article>
+        </section>
+
+        <section class="workspace-grid">
+          <article class="panel cases-panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Live workflow</p>
+                <h2>Interaction queue</h2>
+              </div>
+              <div class="filters" id="filters">
+                <button class="filter active" data-filter="all">All</button>
+                <button class="filter" data-filter="priority">Priority</button>
+                <button class="filter" data-filter="review">Needs review</button>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Case</th><th>Classification</th><th>Queue</th><th>Confidence</th><th>Status</th></tr>
+                </thead>
+                <tbody id="caseTable"></tbody>
+              </table>
+            </div>
+          </article>
+
+          <aside class="panel detail-panel" id="detailPanel">
+            <div class="empty-state" id="emptyState">
+              <div class="empty-icon">◎</div>
+              <h2>Select an interaction</h2>
+              <p>Inspect routing logic, extracted fields, handoff quality, and the complete decision trail.</p>
+            </div>
+            <div class="case-detail hidden" id="caseDetail">
+              <div class="detail-heading">
+                <div><p class="eyebrow">Decision record</p><h2 id="detailId"></h2></div>
+                <span id="detailPriority" class="priority-pill"></span>
+              </div>
+              <div class="confidence-block">
+                <div><span>Model confidence</span><strong id="detailConfidence"></strong></div>
+                <div class="confidence-track"><span id="confidenceBar"></span></div>
+              </div>
+              <div class="detail-section"><h3>Recommended handoff</h3><p id="detailHandoff"></p></div>
+              <div class="detail-section"><h3>Extracted fields</h3><div class="field-grid" id="detailFields"></div></div>
+              <div class="detail-section"><h3>Original interaction</h3><blockquote id="detailTranscript"></blockquote></div>
+              <div class="detail-section"><h3>Decision trail</h3><div class="timeline" id="detailTimeline"></div></div>
+              <button class="button primary full" id="reviewButton">Confirm human review</button>
+            </div>
+          </aside>
+        </section>
+
+        <section class="panel analytics-panel">
+          <div class="panel-header"><div><p class="eyebrow">Evaluation layer</p><h2>Routing distribution</h2></div><span class="verified-label">Human-in-the-loop</span></div>
+          <div class="bar-chart" id="queueChart"></div>
+        </section>
+      </main>
+    </div>
+
+    <dialog id="caseDialog">
+      <form id="caseForm">
+        <div class="modal-heading"><div><p class="eyebrow">Workflow simulator</p><h2>Create interaction</h2></div><button type="button" class="close-button" id="closeDialog">×</button></div>
+        <label>Channel<select id="sourceInput"><option value="voice">Voice</option><option value="chat">Chat</option><option value="email">Email</option><option value="web">Web</option></select></label>
+        <label>Interaction transcript<textarea id="transcriptInput" rows="7" minlength="20" required>A customer reports a vehicle collision at site PHX7. One person is hurt and incident INC-48291 requires escalation.</textarea></label>
+        <p class="form-note">The demo uses deterministic, explainable classification rules and synthetic data.</p>
+        <button class="button primary full" type="submit">Analyze and route</button>
+      </form>
+    </dialog>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
+
